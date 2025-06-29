@@ -2,7 +2,7 @@
 🎭 Animated Snapchat-style Filters using MediaPipe
 Bring your webcam to life with real-time animated filters like smoke effects and glowing eyes! This project uses MediaPipe’s Face Mesh and OpenCV to detect facial landmarks and intelligently apply dynamic filters based on expressions like mouth or eye movements.
 
-✨ Features
+## ✨ Features
 🔍 Face Detection using MediaPipe
 
 🎯 468-Point Facial Landmark Tracking (real-time)
@@ -17,7 +17,7 @@ Bring your webcam to life with real-time animated filters like smoke effects and
 
 ⚡ Smooth Performance (~60+ FPS on modern machines)
 
-🛠️ Setup
+## 🛠️ Setup
 1. Install Dependencies
 
 
@@ -44,11 +44,11 @@ media/
 
 🔁 smoke_animation.mp4 should be a looping video with transparent background (if possible).
 
-🧠 How It Works
+## 🧠 How It Works
 
-📌 Core Functions
+>📌 Core Functions
 
-detectFacialLandmarks(image, face_mesh, display=True)
+>>detectFacialLandmarks(image, face_mesh, display=True)
 
 Converts image to RGB
 
@@ -56,45 +56,29 @@ Detects and draws face mesh (tessellation + contours)
 
 Returns annotated image and detection results
 
-getSize(image, face_landmarks, INDEXES)
+>>getSize(image, face_landmarks, INDEXES)
 
 Extracts a face part (like eye or lips)
 
 Returns width, height, and landmark coordinates
 
-isOpen(image, face_mesh_results, face_part, threshold, display=True)
+>>isOpen(image, face_mesh_results, face_part, threshold, display=True)
+
 Calculates the part’s height-to-face ratio
 
 Returns whether a face part (like mouth/eyes) is OPEN or CLOSE
 
-overlay(image, filter_img, face_landmarks, face_part, INDEXES, display=True)
+>>overlay(image, filter_img, face_landmarks, face_part, INDEXES, display=True)
+
 Centers the overlay image on the face part
 
 Resizes it (~2.5× of part height)
 
 Applies transparency using masks
 
-🎥 Real-Time Filter Application
-
-The webcam is accessed with OpenCV’s VideoCapture. For each frame:
-
-Flip for selfie-view
-
-Detect facial landmarks
-
-Check if eyes/mouth are open
-
-Overlay:
-
-Smoke if mouth is open
-
-Eye filters if eyes are open
-
-Display with FPS counter
-
-▶️ Usage
+## ▶️ Usage
 Run the script:
 
-python your_script.py
+>python main.py
 
-Press ESC to quit the real-time window
+>Press ESC to quit the real-time window
