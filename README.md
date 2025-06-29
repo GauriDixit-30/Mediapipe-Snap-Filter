@@ -29,11 +29,17 @@ Create a folder named media/ and add the following files:
 
 
 media/
+
 ├── sample.jpg
+
 ├── sample2.jpg
+
 ├── sample3.jpg
+
 ├── left_eye.png
+
 ├── right_eye.png
+
 └── smoke_animation.mp4
 
 🔁 smoke_animation.mp4 should be a looping video with transparent background (if possible).
